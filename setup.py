@@ -35,9 +35,6 @@ setup(name='SecretStorage',
 	platforms='Linux',
 	license='BSD',
 	classifiers=classifiers,
-	install_requires=['cryptography'],
-	extras_require={
-		'dbus-python': ['dbus-python'],
-	},
-	requires=['dbus', 'cryptography']
+	install_requires=['jeepney', 'cryptography'],
+	requires=['jeepney', 'cryptography']
 )
