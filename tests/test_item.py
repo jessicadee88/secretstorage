@@ -18,7 +18,7 @@ class ItemTest(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
-		cls.bus = dbus_init(main_loop=False)
+		cls.bus = dbus_init()
 		cls.collection = get_any_collection(cls.bus)
 		cls.created_timestamp = time.time()
 		cls.item = cls.collection.create_item('My item', ATTRIBUTES,

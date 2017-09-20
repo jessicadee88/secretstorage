@@ -13,7 +13,7 @@ class CollectionTest(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
-		cls.bus = dbus_init(main_loop=False)
+		cls.bus = dbus_init()
 		cls.collection = get_any_collection(cls.bus)
 
 	def test_all_collections(self):

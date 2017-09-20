@@ -14,7 +14,7 @@ class ExceptionsTest(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
-		cls.bus = secretstorage.dbus_init(main_loop=False)
+		cls.bus = secretstorage.dbus_init()
 		cls.collection = secretstorage.get_any_collection(cls.bus)
 
 	def test_double_deleting(self):
