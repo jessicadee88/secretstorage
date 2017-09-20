@@ -83,7 +83,7 @@ def format_secret(session, secret, content_type):
 		return (session.object_path, b'', secret, content_type)
 	# PKCS-7 style padding
 	padding = 0x10 - (len(secret) & 0xf)
-	secret += bytes(bytearray((padding,)) * padding)
+	secret += bytes((padding,) * padding)
 	aes_iv = os.urandom(0x10)
 	aes = algorithms.AES(session.aes_key)
 	encryptor = Cipher(aes, modes.CBC(aes_iv), default_backend()).encryptor()
